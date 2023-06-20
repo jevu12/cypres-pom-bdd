@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node16",
+    "paths": {
+      "@badeball/cypress-cucumber-preprocessor/esbuild": ["node_modules/@badeball/cypress-cucumber-preprocessor/esbuild"]
+    }
+  },
+  "include": [
+    "cypress/**/*.ts",
+    "cypress/*.js",
+    "cypress/support/commands.ts",
+  ]
+}

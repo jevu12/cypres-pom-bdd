@@ -1,0 +1,50 @@
+{
+  "name": "example-cypress-bdd",
+  "version": "1.0.0",
+  "description": "Example of cypress with BDD and Typescript in Docker",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:chrome": " npx cypress run --browser chrome",
+    "cypress:run:firefox": "cypress run --browser firefox",
+    "cypress:run:edge": "cypress run --browser edge",
+    "cypress:run:electron": "cypress run --browser electron",
+    "cypress:run:all:parallel": "cypress run --browser all --parallel",
+    "cypress:run:chrome:parallel": "cypress run --browser chrome --parallel",
+    "cypress:run:firefox:parallel": "cypress run --browser firefox --parallel",
+    "cypress:run:edge:parallel": "cypress run --browser edge --parallel",
+    "cypress:run:electron:parallel": "cypress run --browser electron --parallel",
+    "cypress:run:chrome:headless:parallel:docker": "cypress run --browser chrome --headless --parallel --record --key 0f1c3c5e-0b1a-4b1c-8c1d-0e1f2f3a4b5c",
+    "allure:report": "npx cypress run --env allure=true && npx allure generate allure-results --clean -o allure-report && npx allure open allure-report"
+  },
+  "keywords": [
+    "cypress",
+    "bdd",
+    "docker",
+    "docker-compose",
+    "bdd-cypress",
+    "bdd-cypress-docker",
+    "Typescript",
+    "bdd-cypress-typescript",
+    "Allure-report"
+  ],
+  "author": "Jorge Eider Vásquez Urrutia",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cypress/webpack-preprocessor": "^5.17.1",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^12.14.0"
+  },
+  "dependencies": {
+    "cypress-esbuild-preprocessor": "^1.0.2",
+    "start-server-and-test": "^2.0.0",
+    "typescript": "^5.1.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/support/step_definitions"
+  }
+}

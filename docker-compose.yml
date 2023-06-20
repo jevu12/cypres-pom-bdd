@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  cypress_compose:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./Report:/app/allure-results
+
